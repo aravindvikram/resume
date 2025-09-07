@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aravindvikram VT | Portfolio</title>
+  <link rel="stylesheet" href="vikram.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Aravindvikram VT</div>
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1 class="name">Hello, I’m Aravindvikram VT</h1>
+    <p id="typing-text" class="typing"></p>
+  </header>
+
+  <main>
+    <!-- Summary -->
+    <section id="summary" class="reveal">
+      <h2>Summary</h2>
+      <p class="summary">
+        I am seeking opportunities in <strong>Cybersecurity</strong>. 
+        I specialize in <strong>cryptography, cloud security, penetration testing, DFIR, and blue teaming</strong>.
+        I completed an internship at <strong>Tutelr Infinity</strong> and training in 
+        <strong>Advanced Incident Response & Threat Hunting</strong>.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="grid-sections">
+      <div class="grid-card reveal">
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <strong>Cybersecurity Intern – Tutelr Infinity</strong><br>
+            Hands-on work in <strong>Cloud Security, DFIR, Blue Teaming, IAM</strong>.
+          </li>
+          <li>
+            <strong>Laptop & Desktop Service Technician (5 Months)</strong><br>
+            Provided hardware/software troubleshooting, OS installation, performance optimization.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="reveal">
+      <h2>Projects & Internships</h2>
+      <div class="grid-sections">
+        <div class="grid-card">
+          <h3>Reverse Vending Machine</h3>
+          <p>Fraud detection sensors that accept plastic items and reward users with purified water & mobile charging credits.</p>
+        </div>
+        <div class="grid-card">
+          <h3>Underwater Image Recognition</h3>
+          <p>Deep learning for AUV robots enabling accurate underwater object detection.</p>
+        </div>
+        <div class="grid-card">
+          <h3>Digital Forensic Investigation</h3>
+          <p>Investigated malicious USB with <strong>Sleuth Kit</strong>, applied chain-of-custody & forensic analysis methods.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="reveal">
+      <h2>Certifications</h2>
+      <ul>
+        <li>
+          <strong>Certified Penetration Tester – Red Team Hacker Academy</strong>
+          <p>Domain-specific expertise:</p>
+          <ul>
+            <li>Network & Advanced Web App Pentesting</li>
+            <li>Vulnerability Management</li>
+            <li>Wireless Security</li>
+            <li>AD Pentesting</li>
+            <li>Docker Security</li>
+            <li>Thick-client Pentesting</li>
+            <li>Cloud Pentesting</li>
+            <li>VAPT Report Writing</li>
+          </ul>
+        </li>
+        <li>Introduction to Cybersecurity</li>
+        <li>Cybersecurity Analyst Job Simulation</li>
+        <li>Tutelr Infinity Internship</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="grid-card reveal" style="margin:20px;">
+      <h2>Contact Me</h2>
+      <p>Let’s connect for opportunities, collaborations, or discussions.</p>
+      <ul class="contact-list">
+        <li>
+          <i class="fa-solid fa-envelope"></i> 
+          <a href="mailto:aravindvikramvt@gmail.com" id="email-link">aravindvikramvt@gmail.com</a>
+          <button id="copy-btn" title="Copy Email"><i class="fa-solid fa-copy"></i></button>
+        </li>
+        <li>
+          <i class="fa-brands fa-linkedin"></i> 
+          <a href="https://www.linkedin.com/in/aravindvikramvt/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/aravindvikramvt
+          </a>
+        </li>
+        <li>
+          <i class="fa-brands fa-github"></i> 
+          <a href="https://github.com/aravindvikramvt" target="_blank" rel="noopener noreferrer">
+            github.com/aravindvikramvt
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Aravindvikram VT | Thank you for visiting my portfolio</p>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <button id="toggle-btn">🌙 Dark Mode</button>
+  <button id="top-btn">⬆ Back to Top</button>
+
+  <!-- Scripts -->
+  <script>
+    // Hamburger Menu Toggle + Icon Switch
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.innerHTML = navLinks.classList.contains("active") ? "<i class='fa-solid fa-xmark'></i>" : "<i class='fa-solid fa-bars'></i>";
+    });
+
+    // Dark Mode Toggle
+    const toggleBtn = document.getElementById("toggle-btn");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggleBtn.innerText = document.body.classList.contains("dark") 
+        ? "☀️ Light Mode" 
+        : "🌙 Dark Mode";
+    });
+
+    // Back to Top Button
+    const topBtn = document.getElementById("top-btn");
+    window.onscroll = () => {
+      topBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
+    };
+    topBtn.onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+
+    // Typing Animation
+    const textArray = ["Cybersecurity Specialist", "Penetration Tester", "Bug Bounty Hunter"];
+    const typingElement = document.getElementById("typing-text");
+    let arrayIndex = 0, charIndex = 0;
+
+    function type() {
+      if (charIndex < textArray[arrayIndex].length) {
+        typingElement.textContent += textArray[arrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else setTimeout(erase, 2000);
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typingElement.textContent = textArray[arrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 50);
+      } else {
+        arrayIndex = (arrayIndex + 1) % textArray.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+
+    // Scroll Reveal
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll(".reveal");
+      reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < window.innerHeight - 100) el.classList.add("active");
+      });
+    }
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+
+    // Copy Email Function
+    const copyBtn = document.getElementById("copy-btn");
+    const emailLink = document.getElementById("email-link");
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(emailLink.textContent).then(() => {
+        copyBtn.innerHTML = "<i class='fa-solid fa-check'></i>";
+        setTimeout(() => copyBtn.innerHTML = "<i class='fa-solid fa-copy'></i>", 2000);
+      });
+    });
+  </script>
+</body>
+</html>
